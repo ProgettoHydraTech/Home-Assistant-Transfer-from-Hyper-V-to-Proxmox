@@ -1,5 +1,7 @@
 Do Backup of your HA on Hyper-V
 
+refferring to the YT video #34 on Progetto Hydratech Channel
+
 save it somewhere safe
 
 Download Proxmox Virtual Enviroment
@@ -36,3 +38,5 @@ you can create the Virtual Machine following the steps shown in the video
 after creating the virtual machine WITHOUT STARTING IT, you'll go to Shell again and write:
 ...
 qm importdisk VM_ID THE_NAME_OF_THE_FILE_YOU_UNZIPPED_BEFORE local-lvm  [eg.: qm importdisk haos_ova-11.4.qcow2 local-vm]
+
+follow the instruction in the video
