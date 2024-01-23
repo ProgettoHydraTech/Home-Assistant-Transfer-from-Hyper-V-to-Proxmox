@@ -1,0 +1,38 @@
+Do Backup of your HA on Hyper-V
+
+save it somewhere safe
+
+Download Proxmox Virtual Enviroment
+
+Flash it on a USB
+
+Plug the USB in a Pc with an SSD/HDD formatted
+
+set the correct boot sequence in your BIOS in order to make the boot from the USB
+
+Follow the Steps to install PROXMOX VE
+(I won't explain all the steps)
+go to the IP on the screen on a different pc (obviously)
+
+Go to the Shell (It will be opened a terminal/command window)
+
+Copy the .qcow2 Link from this link: https://www.home-assistant.io/installation/linux
+
+in the Shell write:
+...
+  wget THE_LINK_YOU_COPIED
+...
+
+a .xz file will be downloaded (xz is a compression standard)
+
+to unzip the file you'll write
+...
+unxz THE_NAME_OF_THE_FILE [eg.: unxz haos_ova-11.4.qcow2.xz]
+
+you can check writing ls: if the file shown is without the extention .xz it worked.
+
+you can create the Virtual Machine following the steps shown in the video
+
+after creating the virtual machine WITHOUT STARTING IT, you'll go to Shell again and write:
+...
+qm importdisk VM_ID THE_NAME_OF_THE_FILE_YOU_UNZIPPED_BEFORE local-lvm  [eg.: qm importdisk haos_ova-11.4.qcow2 local-vm]
